@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Äänestyssivusto</title>
+    <!--CSS Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="tyylit.css">
+</head>
+<body>
+    <!--Header, main section, footer-->
+    <header class="container-fluid">
+        <h1 class="banner-otsikko" style="padding: 55px;">Äänestyssivusto</h1>
+    </header>
+
+<div class="container2">
+    <div class="poll-form">
+
+      <h2>Tee Äänestys</h2>
+
+      <!-- Poll Title -->
+      <div class="form-group">
+        <label for="poll-title">1. Äänestyksen Otsikko</label>
+        <input type="text" id="poll-title" minlength="5" maxlength="50" required placeholder="Enter poll title here..." />
+      </div>
+
+      <!-- Poll Description -->
+      <div class="form-group">
+        <label for="poll-description">2. Äänestyksen Kuvaus</label>
+        <textarea id="poll-description" required minlength="5" maxlength="225" placeholder="Describe your poll or ask a question..."></textarea>
+      </div>
+
+      <!-- Number of Options -->
+      <div class="form-group">
+        <label for="option-count">3. Vaihtoehtojen Määrä</label>
+        <select id="option-count">
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+
+      <!-- Dynamic Option Fields -->
+      <div class="form-group" id="option-fields">
+        <!-- JS will populate this based on dropdown -->
+      </div>
+
+      <!-- Buttons -->
+      <div class="form-buttons">
+        <button id="cancel-btn" class="btn cancel">Peruuta</button>
+        <button id="create-btn" class="btn create">Tee äänestys</button>
+      </div>
+
+    </div>
+  </div>
+    
+    <script src="JS/JS-tiedosto.js"></script>
+</body>
+</html>
